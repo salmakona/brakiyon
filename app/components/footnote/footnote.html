@@ -1,0 +1,39 @@
+ <header>
+          <div class="container">
+          <div class="col-sm-4">
+                  <div class="header_logo">
+                      <a [routerLink]="['/home']" class="closebtn" onclick="closeNav()"><img src="../app/components/images/logo-wh.png" alt=""></a>
+                  </div>
+              </div>
+          <div class="col-sm-4"><h2>Gesture</h2></div>
+          <div class="col-sm-4">
+              <span class="radius_l">Route A</span>
+              <span class="radius_r">Route B</span>
+          </div>
+          </div>
+      </header>
+        
+      <div class="view_gasture_body_container">
+          <div class="container">
+              <span>Add Gesture</span><span> > </span><span>Foot Note</span>
+          </div>
+      </div>
+        
+        <section class="form_area">
+        	<div class="container">
+                  <div class="form_area_main_foot_not">
+                      <div class="form_area_main_foot_not_main">
+                        <div class="col-sm-12">
+                        	<p>Are you sure you want to add this gasuture</p>
+                        </div>
+                        <div class="col-sm-6">
+                        	<a [routerLink]="['/viewgesture']">YES</a>
+                        </div>
+                        <div class="col-sm-6">
+                        	<a [routerLink]="['/home']" style="background:#C3C3C3;">NO</a>
+                        </div>
+                      </div>
+                  </div>
+            </div>
+        </section>
+        

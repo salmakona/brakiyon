@@ -1,0 +1,53 @@
+       <header>
+          <div class="container">
+          <div class="col-sm-4">
+                  <div class="header_logo">
+                      <a [routerLink]="['/home']" class="closebtn"><img src="../app/components/images/logo-wh.png" alt=""></a>
+                  </div>
+              </div>
+          <div class="col-sm-4"><h2>Gesture</h2></div>
+          <div class="col-sm-4">
+              <span class="radius_l">Route A</span>
+              <span class="radius_r">Route B</span>
+          </div>
+          </div>
+      </header>
+      <div class="view_gasture_body_container">
+          <div class="container">
+              <span>Add Gesture</span>
+              <span><a [routerLink]="['/testgesture']">Test Gesture from</a></span>
+          </div>
+      </div>
+        
+        <section class="form_area fadeInDown">
+           <form #f="ngForm" [formGroup]="gestureformModel" (ngSubmit)="onSubmit(f.value, f.valid)" novalidate>
+                <div class="container">
+                    <div class="form_area_main_gesture">
+                        <div class="form_area_main_gesture_main">
+                            <div class="col-sm-12">
+                                    <label>Label:</label>
+                                    <div class="form-group" [class.has-error]="gestureformModel.hasError('validator','name')">
+                                        <input class="text" type="text" placeholder="Input your name" formControlName="name" minlength="3">
+                                         <span [hidden]="!gestureformModel.hasError('required','name')">Name is required </span>
+                                    </div>
+                            </div>
+                            <div class="col-sm-12">
+                                    <label>Description:</label>
+                                        <div class="form-group" [class.has-error]="gestureformModel.hasError('validator', 'description')">
+                                            <textarea class="text" placeholder="Input your description" formControlName="description"></textarea>
+                                            <span [hidden]="!gestureformModel.hasError('required', 'description')">description is required</span>
+                                        </div>
+                            </div>
+                            <div class="col-sm-12">
+                               <!-- <button (click)="add()" type="button" class="Submit" >ADD</button>-->
+                                    <div class="form-group">
+                                        <button type="submit" class="Submit">ADD</button>
+                                    </div>
+                                    <!--<a [routerLink]="['/footnote']" class="Submit" >ADD</a>-->
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+           </form>
+    </section>

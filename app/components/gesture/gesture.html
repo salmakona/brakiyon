@@ -1,0 +1,41 @@
+       <header>
+          <div class="container">
+          <div class="col-sm-4">
+                  <div class="header_logo">
+                      <a [routerLink]="['/home']"class="closebtn" ><img src="../app/components/images/logo-wh.png" alt=""></a>
+                  </div>
+              </div>
+          <div class="col-sm-4"><h2>Gesture</h2></div>
+          <div class="col-sm-4">
+              <span class="radius_l">Route A</span>
+              <span class="radius_r">Route B</span>
+          </div>
+          </div>
+      </header>
+        
+      <div class="view_gasture_body_container">
+          <div class="container">
+              <span>Add Gesture</span>
+              <span><a [routerLink]="['/testgesture']"class="closebtn" >Test Gesture from</a></span>
+          </div>
+      </div>
+        
+        <section class="form_area fadeInDown">
+        	<div class="container">
+                  <div class="form_area_main_gesture">
+                      <div class="form_area_main_gesture_main">
+                        <div class="col-sm-12">
+                                <label>Label:</label>
+                                <input class="text" type="text" placeholder="Input your label">
+                        </div>
+                        <div class="col-sm-12">
+                                <label>Description:</label>
+                                <textarea class="text" placeholder="Input your description"></textarea>
+                        </div>
+                        <div class="col-sm-12">
+                                <a [routerLink]="['/footnote']" class="Submit" >ADD</a>
+                        </div>
+                      </div>
+                  </div>
+            </div>
+        </section>

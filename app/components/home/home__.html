@@ -1,0 +1,31 @@
+ <body class="location-bg">
+  	<div class="mainwrapper">
+        <!--Start Body-->
+        <div class="body_header">
+        	<div class="container">
+            	<div class="logo"><a href="#"><img src="app/components/images/Logo.png" alt="" title=""></a></div>
+                <div class="contact">
+                	<h3>Phone: +1-949-689-7995</h3>
+                    <ul>
+                    	<li class="logout-bg"></li>
+                    	<li class="admin-bg"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="body_content">
+        	<div class="container">
+            	<div class="body_content_tab">
+                    <ul>
+                        <li><a [routerLink]="['/gesture']">gesture</a></li>
+                        <li><a [routerLink]="['/#']">Customers</a></li>
+                        <li><a [routerLink]="['/#']">Devices</a></li>
+                        <li><a [routerLink]="['/#']">PlayGround</a></li>
+                        <li><a [routerLink]="['/#']">Reports</a></li>
+                        <li><a [routerLink]="['/#']">User</a></li>
+                    </ul>
+                </div>
+               <router-outlet></router-outlet>
+        </div>
+        <!--End Body-->
+    </div>

@@ -1,0 +1,86 @@
+<header>
+        	<div class="container">
+            <div class="col-sm-4">
+                    <div class="header_logo">
+                        <a [routerLink]="['/home']"><img src="../app/components/images/logo-wh.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <section class="header_sub">
+            <div class="container">
+                <div class="col-sm-6"> 
+                    <h3>Add Customers </h3>
+                </div>
+                <div class="col-sm-6">
+                    <div class="header_sub_right">
+                        <span class="header_sub_right_btn">Device</span>
+                        <span class="header_sub_right_btn">Location</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="back_button">
+            <div class="container">
+                <div class="col-md-12"><a [routerLink]="['/view_customer']"><img src="../app/components/images/New-User-back.png" alt=""></a></div>
+            </div>
+        </section>
+        
+        <section class="form_area">
+        	<div class="container">
+                  <div class="form_area_main">
+                      <div class="form_area_main_inner">
+                        <div class="col-sm-12">
+                                <label>Name:</label>
+                                <input class="text" type="text" placeholder="Name">
+                        </div>
+                        <div class="col-sm-12">
+                                <label>Mailing Address:</label>
+                                <div class="form_area_main_inner_dropdown" style="padding-right:6px;"> 
+                                    <div class="styled">
+                                      <select  class="text">
+                                        <option selected>State</option>
+                                        <option>Apples</option>
+                                        <option>Chocklate</option>
+                                        <option>Pancakes</option>
+                                      </select>
+                                    </div>
+                                </div>                        
+                                <div class="form_area_main_inner_dropdown"> 
+                                  	<div class="styled">
+                                      <select  class="text">
+                                        <option selected>City</option>
+                                        <option>Apples</option>
+                                        <option>Chocklate</option>
+                                        <option>Pancakes</option>
+                                      </select>
+                                    </div>
+                                </div>
+                                <div class="form_area_main_inner_dropdown" style="padding-left:6px;"> <input class="text" type="text" placeholder="ZIP Code"></div>
+                               <textarea class="text" placeholder="Address"></textarea>
+                        </div>
+                        <div class="col-sm-12">
+                                <label>#HCW:</label>
+                                <input class="text" type="text" placeholder="#HCW">
+                        </div>
+                        <div class="col-sm-12">
+                                <label>#Device:</label>
+                                <input class="text" type="text" placeholder="#Device">
+                        </div>
+                        <div class="col-sm-12">
+                                <label>HWEI today:</label>
+                                <input class="text" type="text" placeholder="HWEI today">
+                        </div>
+                        <div class="col-sm-12">
+                                <label>#Locations:</label>
+                                <input class="text" type="text" placeholder="#Locations">
+                        </div>
+                        <div class="col-sm-12">
+                                <input class="Submit" type="submit" value="Add Customer">
+                        </div>
+                      </div>
+                  </div>
+            </div>
+        </section>
