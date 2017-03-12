@@ -1,4 +1,4 @@
-       <header>
+ <header>
           <div class="container">
           <div class="col-sm-4">
                   <div class="header_logo">
@@ -26,9 +26,9 @@
                         <div class="form_area_main_gesture_main">
                             <div class="col-sm-12">
                                     <label>Label:</label>
-                                    <div class="form-group" [class.has-error]="gestureformModel.hasError('validator','name')">
-                                        <input class="text" type="text" placeholder="Input your name" formControlName="name" minlength="3">
-                                         <span [hidden]="!gestureformModel.hasError('required','name')">Name is required </span>
+                                    <div class="form-group" [class.has-error]="gestureformModel.hasError('validator','label')">
+                                        <input class="text" type="text" placeholder="Input your label" formControlName="label" minlength="3">
+                                         <span [hidden]="!gestureformModel.hasError('required','label')">Label is required </span>
                                     </div>
                             </div>
                             <div class="col-sm-12">

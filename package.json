@@ -4,8 +4,10 @@
   "description": "",
   "private": true,
   "scripts": {
+    "tsc:w": "tsc -w",
+    "tsc": "tsc",
     "start": "live-server"
-  },
+    },
   "dependencies": {
     "@angular/common": "2.4.6",
     "@angular/compiler": "2.4.6",
@@ -15,20 +17,35 @@
     "@angular/platform-browser": "2.4.6",
     "@angular/platform-browser-dynamic": "2.4.6",
     "@angular/router": "3.4.6",
+    "@types/express": "^4.0.35",
+    "@types/node": "^4.0.30",
     "core-js": "2.4.0",
+    "express": "^4.15.2",
     "host": "0.0.1",
     "intl": "^1.1.0",
     "rxjs": "5.0.1",
     "systemjs": "0.19.37",
+    "ws": "^1.1.1",
     "zone": "^0.3.4",
     "zone.js": "^0.7.2"
   },
-   "devDependencies": {
-    "@types/es6-shim": "^0.31.32",
+  "devDependencies": {
+    "@types/es6-shim": "0.0.30",
+    "@types/ws": "0.0.29",
     "live-server": "1.0.0",
+    "nodemon": "^1.11.0",
     "typescript": "2.0.0"
   },
   "main": "systemjs.config.js",
   "author": "Salma Kona Gugly",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salmakona/brakiyon.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/salmakona/brakiyon/issues"
+  },
+  "homepage": "https://github.com/salmakona/brakiyon#readme"
 }

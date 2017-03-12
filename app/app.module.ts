@@ -5,6 +5,8 @@ import { RouterModule } from '@angular/router';
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import{routing} from './app.routes';
+import { HttpModule, JsonpModule } from '@angular/http';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import{platformBrowser} from '@angular/platform-browser';
 import{HomeComponent} from './components/home/home';
 import{GestureComponent} from './components/gesture/gesture';
@@ -25,7 +27,7 @@ import{EditUserComponent} from'./components/users/edit_user';
 import{TestGestureComponent} from'./components/gesture/testgesture';
 
 @NgModule({
-    imports: [ BrowserModule, routing, ReactiveFormsModule],
+    imports: [ BrowserModule, routing, ReactiveFormsModule,HttpModule,JsonpModule],
 
     declarations: [  AppComponent,HomeComponent,GestureComponent,
                     ViewGestureComponent,FootNoteComponent,AddCustomerComponent,

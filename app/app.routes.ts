@@ -16,6 +16,8 @@ import{ViewUserComponent} from'./components/users/view_user';
 import{AddUserComponent} from'./components/users/add_user';
 import{EditUserComponent} from'./components/users/edit_user';
 import{TestGestureComponent} from'./components/gesture/testgesture';
+import { WikiComponent }      from './components/gesture/tt';
+import { WikiSmartComponent } from './components/gesture/wiki-smart.component';
 
 const routes: Routes = [
     

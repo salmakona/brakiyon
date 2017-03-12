@@ -5,7 +5,8 @@ System.config({
         module: "commonjs"},
     map: {
         '@angular': 'node_modules/@angular',
-        'rxjs'    : 'node_modules/rxjs'
+        'rxjs'    : 'node_modules/rxjs',
+        'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
     },
     paths: {
         'node_modules/@angular/*': 'node_modules/@angular/*/bundles'
@@ -21,6 +22,7 @@ System.config({
         '@angular/compiler'                : {main: 'compiler.umd.min.js'},
         '@angular/router'                  : {main: 'router.umd.min.js'},
         '@angular/forms'                  : {main: 'forms.umd.min.js'},
+        '@angular/http'                    : {main: 'http.umd.min.js'},
         '@angular/platform-browser'        : {main: 'platform-browser.umd.min.js'},
         '@angular/platform-browser-dynamic': {main: 'platform-browser-dynamic.umd.min.js'}
     }
