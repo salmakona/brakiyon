@@ -31,58 +31,23 @@
               </div>
           </div>
       </div>
-      <div class="view_gasture_main">
-          <div class="container">
-              <div class="view_gasture_main_main">
-                  <div class="handwash"> 
-                      <div class="col-sm-6">
-                          <img src="../app/components/images/hand-wash.png"/>
-                          <h4> Hand Wash</h4>
-                      </div>
-                      <div class="col-sm-6"> 
-                        <p>This is Hand Wash This is Hand Wash .
-                          This is Hand Wash This is Hand Wash This is Hand Wash This is Hand Wash This is Hand Wash This is Hand Wash</p>
-                      </div>
-                  </div>
-                  <div class="handwash"> 
-                      <div class="col-sm-6">
-                          <img src="../app/components/images/towel.png"/>
-                          <h4>Towel</h4>
-                      </div>
-                      <div class="col-sm-6"> 
-                        <p>This is Towel This is Towel This is Towel This is Towel This is Towel This is Towel 
-                          This is Towel This is Towel This is Towel This is Towel This is Towel This is Towe</p>
-                      </div>
-                  </div>
-                  <div class="handwash"> 
-                      <div class="col-sm-6">
-                          <img src="../app/components/images/Wash-Hands_40.png"/>
-                          <h4>Hand Washing</h4>
-                      </div>
-                      <div class="col-sm-6"> 
-                        <p>This is Hand Washing  This is Hand Washing This is Hand Washing 
-                          This is Hand Washing  This is Hand Washing This is Hand Washing</p>
-                      </div>
-                  </div>
-                  <div class="handwash"> 
-                      <div class="col-sm-6">
-                          <img src="../app/components/images/hand-wash.png"/>
-                          <h4> Hand Wash</h4>
-                      </div>
-                      <div class="col-sm-6"> 
-                        <p>This is Hand Wash This is Hand Wash .
-                          This is Hand Wash This is Hand Wash This is Hand Wash This is Hand Wash This is Hand Wash This is Hand Wash</p>
-                      </div>
-                  </div>
+
+<div class="view_gasture_main"> 
+    <div class="container">
+         <div class="view_gasture_main_main">
+                    <ul>
+                        <li *ngFor="let post of posts.gestures">  
+                            <div class="handwash"> 
+                                <div class="col-sm-6">                        
+                                    <img src="../app/components/images/hand-wash.png"/>
+                                        <h4>  <span>{{post.label}}</span></h4>
+                                </div>
+                                <div class="col-sm-6"> 
+                                    <p>{{post.description}}</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
               </div>
-          </div>
-      </div>
-      
-      <div class="view_gasture_main_page_innation">
-      	<div class="container">
-        	<span class="next_gasture"></span>
-        	<span class="total_gasture">of 4,127</span>
-        	<span class="current_gasture">4</span>
-        	<span class="prev_gasture"></span>
         </div>
-      </div>
+</div>

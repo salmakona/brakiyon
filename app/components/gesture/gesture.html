@@ -17,26 +17,36 @@
           <div class="container">
               <span>Add Gesture</span>
               <span><a [routerLink]="['/testgesture']"class="closebtn" >Test Gesture from</a></span>
-
           </div>
       </div>
         
-        <section class="form_area fadeInDown">
-        	<div class="container">
-                  <div class="form_area_main_gesture">
-                      <div class="form_area_main_gesture_main">
-                        <div class="col-sm-12">
-                                <label>Label:</label>
-                                <input class="text" type="text" placeholder="Input your label">
+ <section class="form_area fadeInDown">
+           <form #f="ngForm" [formGroup]="gestureformModel" (ngSubmit)="onSubmit(f.value, f.valid)" novalidate>
+                <div class="container">
+                    <div class="form_area_main_gesture">
+                        <div class="form_area_main_gesture_main">
+                            <div class="col-sm-12">
+                                    <label>Label:</label>
+                                    <div class="form-group" [class.has-error]="gestureformModel.hasError('validator','label')">
+                                        <input class="text" type="text" placeholder="Input your label" formControlName="label" minlength="3">
+                                         <span [hidden]="!gestureformModel.hasError('required','label')">Label is required </span>
+                                    </div>
+                            </div>
+                            <div class="col-sm-12">
+                                    <label>Description:</label>
+                                        <div class="form-group" [class.has-error]="gestureformModel.hasError('validator', 'description')">
+                                            <textarea class="text" placeholder="Input your description" formControlName="description"></textarea>
+                                            <span [hidden]="!gestureformModel.hasError('required', 'description')">description is required</span>
+                                        </div>
+                            </div>
+                            <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <button type="submit" class="Submit">ADD</button>
+                                    </div>
+                            </div>
+                        
                         </div>
-                        <div class="col-sm-12">
-                                <label>Description:</label>
-                                <textarea class="text" placeholder="Input your description"></textarea>
-                        </div>
-                        <div class="col-sm-12">
-                                <a [routerLink]="['/footnote']" class="Submit" >ADD</a>
-                        </div>
-                      </div>
-                  </div>
-            </div>
-        </section>
+                    </div>
+                </div>
+           </form>
+    </section>

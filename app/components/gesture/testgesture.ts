@@ -1,7 +1,7 @@
 import {Injectable} from "@angular/core";
 import {Component} from '@angular/core';
 import {FormControl, FormGroup,FormBuilder, Validators} from '@angular/forms';
-import {Http, Response, Headers, RequestOptions,}from '@angular/http';
+import {Http, Response, Headers, RequestOptions}from '@angular/http';
 import { FormsModule} from '@angular/forms';
 import 'rxjs/add/operator/map';
 import {Observable} from 'rxjs/Rx';
@@ -15,8 +15,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class TestGestureComponent{
 
-        gestureformModel: FormGroup;
-           
+        gestureformModel: FormGroup;   
         constructor(private gf:FormBuilder,private http:Http) {
          const fb = new FormBuilder();
             this.gestureformModel = fb.group({
@@ -29,8 +28,8 @@ export class TestGestureComponent{
            console.log("Form Button Clicked"); 
            var url = "https://braykion.herokuapp.com/api/gestures";
             var data = {
-            "label":"This is Salma Kona Gugly Label",
-            "description":"This is Salma Kona Gugly description"
+            "label":"Gugly Label",
+            "description":" Gugly description"
             }
             let headers = new Headers({ 'Content-Type': 'application/json',"Access-Control-Allow-Origin":"*" });
             let options = new RequestOptions({ headers: headers });

@@ -1,4 +1,11 @@
+import {Injectable} from "@angular/core";
 import {Component} from '@angular/core';
+import {FormControl, FormGroup,FormBuilder, Validators} from '@angular/forms';
+import {Http, Response, Headers, RequestOptions}from '@angular/http';
+import { FormsModule} from '@angular/forms';
+import 'rxjs/add/operator/map';
+import {Observable} from 'rxjs/Rx';
+import 'rxjs/add/operator/map';
 
 @Component({
     selector: 'gesture',
@@ -7,5 +14,39 @@ import {Component} from '@angular/core';
 })
 export class GestureComponent{
 
-}
+    gestureformModel: FormGroup;   
+        constructor(private gf:FormBuilder,private http:Http) {
+         const fb = new FormBuilder();
+            this.gestureformModel = fb.group({
+                'label': [null,Validators.required],
+                'description': [null,Validators.required]
+        })
+
+    }
+          
+    onSubmit(formValue: any, isFormValid: boolean) {
+
+            var description:string;
+            var label:string;     
+
+           console.log("Form Button Clicked"); 
+           console.log();
+           var xx =formValue;
+            console.log(xx);
+           var url = "https://braykion.herokuapp.com/api/gestures";
+
+            var data = {
+            "label":'This is test',
+            "description":" Gugly description"
+            }
+           console.log(data.label);
+            let headers = new Headers({ 'Content-Type': 'application/json',"Access-Control-Allow-Origin":"*" });
+            let options = new RequestOptions({ headers: headers });
+                return this.http.post(url,JSON.stringify(data), options).map((res: Response) => res.json())
+                    .subscribe(data => {alert('ok');
+                        }, error => {console.log(error.json());
+                    });
+
+                }
+    }
  
