@@ -14,34 +14,28 @@ import 'rxjs/add/operator/map';
 })
 export class GestureComponent{
 
-    gestureformModel: FormGroup;   
+       gestureformModel: FormGroup;   
         constructor(private gf:FormBuilder,private http:Http) {
          const fb = new FormBuilder();
             this.gestureformModel = fb.group({
                 'label': [null,Validators.required],
                 'description': [null,Validators.required]
-        })
+            })
+        }
 
-    }
-          
-    onSubmit(formValue: any, isFormValid: boolean) {
-
-            var description:string;
-            var label:string;     
-
+       onSubmit(formValue: any, isFormValid: boolean) {
            console.log("Form Button Clicked"); 
-           console.log();
-           var xx =formValue;
-            console.log(xx);
            var url = "https://braykion.herokuapp.com/api/gestures";
-
+            var x = formValue.label;
+            var y = formValue.description;
             var data = {
-            "label":'This is test',
-            "description":" Gugly description"
+                "label":x,
+                "description":y
             }
-           console.log(data.label);
             let headers = new Headers({ 'Content-Type': 'application/json',"Access-Control-Allow-Origin":"*" });
             let options = new RequestOptions({ headers: headers });
+            let body =JSON.stringify(data);
+            console.log(formValue.label,formValue.description);
                 return this.http.post(url,JSON.stringify(data), options).map((res: Response) => res.json())
                     .subscribe(data => {alert('ok');
                         }, error => {console.log(error.json());
