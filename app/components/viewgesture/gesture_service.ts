@@ -25,4 +25,7 @@ export class GestureService {
             console.error(errMsg); // log to console instead
             return Observable.throw(errMsg);
       }
+
+
+ 
 }

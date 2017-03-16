@@ -1,0 +1,23 @@
+            <header>
+          <div class="container">
+          <div class="col-sm-4">
+                  <div class="header_logo">
+                      <a [routerLink]="['/home']"class="closebtn"><img src="../app/components/images/logo-wh.png" alt=""></a>
+
+                  </div>
+              </div>
+          <div class="col-sm-4"><h2>Gesture</h2></div>
+          <div class="col-sm-4">
+              <span class="radius_l">Route A</span>
+              <span class="radius_r">Route B</span>
+          </div>
+          </div>
+      </header>
+      <div class="view_gasture_body_container">
+            <h1>Hello</h1>
+            <div *ngIf="posts">
+                <h2>{{posts.label}}</h2>
+                <button>Back</button>
+                <button>Save</button>
+                </div>
+    </div> 

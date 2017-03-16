@@ -6,6 +6,8 @@ import { FormsModule} from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location }               from '@angular/common';
 import { GestureService }       from './gesture_service';
 
 @Component({

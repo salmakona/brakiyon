@@ -1,12 +1,11 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { NgModule }      from '@angular/core';
+import { NgModule,OnInit}      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import{routing} from './app.routes';
 import { HttpModule, JsonpModule } from '@angular/http';
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import{platformBrowser} from '@angular/platform-browser';
 import{HomeComponent} from './components/home/home';
 import{GestureComponent} from './components/gesture/gesture';
@@ -25,15 +24,18 @@ import{ViewUserComponent} from'./components/users/view_user';
 import{AddUserComponent} from'./components/users/add_user';
 import{EditUserComponent} from'./components/users/edit_user';
 import{TestGestureComponent} from'./components/gesture/testgesture';
+import{EditGestureComponent} from './components/viewgesture/edit_gesture';
+import{UpdateGestureComponent} from'./components/viewgesture/update';
 
 @NgModule({
     imports: [ BrowserModule, routing, ReactiveFormsModule,HttpModule,JsonpModule],
 
-    declarations: [  AppComponent,HomeComponent,GestureComponent,
+    declarations: [AppComponent,HomeComponent,GestureComponent,
                     ViewGestureComponent,FootNoteComponent,AddCustomerComponent,
                     ViewCustomerComponent,EditCustomerComponent,ViewDeviceComponent,
                     AddDeviceComponent,EditDeviceComponent,PlayGroundComponent,
-                     ReportsComponent,ViewUserComponent,AddUserComponent,EditUserComponent,TestGestureComponent
+                     ReportsComponent,ViewUserComponent,AddUserComponent,EditUserComponent,
+                     TestGestureComponent,EditGestureComponent,UpdateGestureComponent
                 ],
 
     providers:[{provide: LocationStrategy, useClass: HashLocationStrategy}],

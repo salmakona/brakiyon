@@ -32,15 +32,17 @@ export class GestureComponent{
                 "label":x,
                 "description":y
             }
-            let headers = new Headers({ 'Content-Type': 'application/json',"Access-Control-Allow-Origin":"*" });
-            let options = new RequestOptions({ headers: headers });
-            let body =JSON.stringify(data);
-            console.log(formValue.label,formValue.description);
-                return this.http.post(url,JSON.stringify(data), options).map((res: Response) => res.json())
-                    .subscribe(data => {alert('ok');
-                        }, error => {console.log(error.json());
-                    });
+                let headers = new Headers({ 'Content-Type': 'application/json',"Access-Control-Allow-Origin":"*" });
+                let options = new RequestOptions({ headers: headers });
+                let body =JSON.stringify(data);
+                console.log(formValue.label,formValue.description);
+                    return this.http.post(url,JSON.stringify(data), options).map((res: Response) => res.json())
+                        .subscribe(data => {alert('ok');
+                            }, error => {console.log(error.json());
+                        });
 
                 }
     }
+
+
  

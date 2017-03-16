@@ -16,6 +16,8 @@ import{ViewUserComponent} from'./components/users/view_user';
 import{AddUserComponent} from'./components/users/add_user';
 import{EditUserComponent} from'./components/users/edit_user';
 import{TestGestureComponent} from'./components/gesture/testgesture';
+import{EditGestureComponent} from './components/viewgesture/edit_gesture';
+import{UpdateGestureComponent} from'./components/viewgesture/update';
 
 
 const routes: Routes = [
@@ -36,7 +38,10 @@ const routes: Routes = [
     {path: 'view_user', component: ViewUserComponent},
     {path: 'add_user', component: AddUserComponent},
     {path: 'edit_user', component: EditUserComponent},
-    {path: 'testgesture', component: TestGestureComponent}
+    {path: 'testgesture', component: TestGestureComponent},
+    {path:'edit_gesture',component: EditGestureComponent},
+    { path: 'update/:id', component: UpdateGestureComponent }
+
 
 ];
 
