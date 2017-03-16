@@ -18,6 +18,8 @@ import{EditUserComponent} from'./components/users/edit_user';
 import{TestGestureComponent} from'./components/gesture/testgesture';
 import{EditGestureComponent} from './components/viewgesture/edit_gesture';
 import{UpdateGestureComponent} from'./components/viewgesture/update';
+import{PaginationComponent} from './components/pagination/pagination';
+import{GesturePaginationComponent} from './components/pagination/gs';
 
 
 const routes: Routes = [
@@ -40,7 +42,9 @@ const routes: Routes = [
     {path: 'edit_user', component: EditUserComponent},
     {path: 'testgesture', component: TestGestureComponent},
     {path:'edit_gesture',component: EditGestureComponent},
-    { path: 'update/:id', component: UpdateGestureComponent }
+    { path: 'update/:id', component: UpdateGestureComponent },
+    { path: 'pagination', component: PaginationComponent },
+    { path: 'gesturepagination', component: GesturePaginationComponent }
 
 
 ];

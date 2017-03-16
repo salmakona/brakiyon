@@ -1,0 +1,42 @@
+
+<header>
+    <div class="container">
+        <div class="col-sm-4">
+                <div class="header_logo">
+                    <a [routerLink]="['/home']"class="closebtn"><img src="../app/components/images/logo-wh.png" alt=""></a>
+
+                </div>
+            </div>
+        <div class="col-sm-4"><h2>Gesture</h2></div>
+        <div class="col-sm-4">
+            <span class="radius_l">Route A</span>
+            <span class="radius_r">Route B</span>
+        </div>
+    </div>
+</header>
+
+        <ul>               
+        <li *ngFor="let post of data.gestures"> 
+                <!--<a  [routerLink]="['/update', post._id]">{{post.label}}</a>-->
+            {{post.label}}
+        </li>
+        <ul>  
+            <!-- pager -->
+          <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+                <li [ngClass]="{disabled:pager.currentPage === 1}">
+                    <a (click)="setPage(1)">First</a>
+                </li>
+                <li [ngClass]="{disabled:pager.currentPage === 1}">
+                    <a (click)="setPage(pager.currentPage - 1)">Previous</a>
+                </li>
+                <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+                    <a (click)="setPage(page)">{{page}}</a>
+                </li>
+                <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                    <a (click)="setPage(pager.currentPage + 1)">Next</a>
+                </li>
+                <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+                    <a (click)="setPage(pager.totalPages)">Last</a>
+                </li>
+            </ul>
+

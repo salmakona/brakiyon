@@ -26,6 +26,8 @@ import{EditUserComponent} from'./components/users/edit_user';
 import{TestGestureComponent} from'./components/gesture/testgesture';
 import{EditGestureComponent} from './components/viewgesture/edit_gesture';
 import{UpdateGestureComponent} from'./components/viewgesture/update';
+import{PaginationComponent} from './components/pagination/pagination';
+import{GesturePaginationComponent} from './components/pagination/gs';
 
 @NgModule({
     imports: [ BrowserModule, routing, ReactiveFormsModule,HttpModule,JsonpModule],
@@ -35,7 +37,8 @@ import{UpdateGestureComponent} from'./components/viewgesture/update';
                     ViewCustomerComponent,EditCustomerComponent,ViewDeviceComponent,
                     AddDeviceComponent,EditDeviceComponent,PlayGroundComponent,
                      ReportsComponent,ViewUserComponent,AddUserComponent,EditUserComponent,
-                     TestGestureComponent,EditGestureComponent,UpdateGestureComponent
+                     TestGestureComponent,EditGestureComponent,UpdateGestureComponent,
+                     PaginationComponent,GesturePaginationComponent
                 ],
 
     providers:[{provide: LocationStrategy, useClass: HashLocationStrategy}],

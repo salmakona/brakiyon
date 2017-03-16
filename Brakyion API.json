@@ -1,0 +1,531 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Braykion",
+		"_postman_id": "46b1c56a-8003-c2cc-9344-7aa62c20af66",
+		"description": "This is the Braykion API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Address",
+			"description": "The address collection",
+			"item": [
+				{
+					"name": "https://braykion.herokuapp.com/api/address",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/address",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": "GET ONE"
+					},
+					"response": []
+				},
+				{
+					"name": "https://braykion.herokuapp.com/api/address",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/address/id/123456123466",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "UPDATE"
+					},
+					"response": []
+				},
+				{
+					"name": "https://braykion.herokuapp.com/api/address",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/address",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"street_address_line1\":\"9500 Gilman Dr.\",\n\t\"street_address_line2\":\"\",\n\t\"city\":\"La Jolla\",\n\t\"state\":\"CA\",\n\t\"zip\":\"92109\",\n\t\"country\":\"USA\",\n\t\"gps_coordinates\":\"\"\n}"
+						},
+						"description": "CREATE"
+					},
+					"response": []
+				},
+				{
+					"name": "https://braykion.herokuapp.com/api/address/id/:id",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/address/id/5894f7433166d7ba02060fb9",
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": "DELETE"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Angular Route: Add Gesture",
+			"description": "",
+			"item": [
+				{
+					"name": "https://braykion.herokuapp.com",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/gestures",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"label\":\"Test Label\",\n\t\"description\":\"A sample description of this gesture\"\n}"
+						},
+						"description": "CREATE'S a Gesture\n\n"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Angular Route: Customers",
+			"description": "",
+			"item": [
+				{
+					"name": "https://braykion.herokuapp.com/api/customers/id/:id",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/customers/id/5894f7433166d7ba02060fb9",
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": "DELETE"
+					},
+					"response": []
+				},
+				{
+					"name": "https://braykion.herokuapp.com/api/customers",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/customers/id/123456123466",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "UPDATE"
+					},
+					"response": []
+				},
+				{
+					"name": "https://braykion.herokuapp.com/api/customers",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/customers",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"customer_name\":\"Braykion\",\n\t\"customer_contat\":\"Adam Arthur\",\n\t\"address_id\":\"58c1942d4b6db81100f90384\"\n}"
+						},
+						"description": "CREATE"
+					},
+					"response": []
+				},
+				{
+					"name": "https://braykion.herokuapp.com/api/customers",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/customers",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": "GET ONE"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Angular Route: Devices",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "Angular Route: Playground",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "Angular Route: Reports",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "Angular Route: User",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "Angular Route: View Gesture",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:3000/api/gestures",
+					"request": {
+						"url": "http://localhost:3000/api/gestures",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": "GET ONE"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customers",
+			"description": "The customers collection",
+			"item": []
+		},
+		{
+			"name": "Gestures",
+			"description": "The gestures position collection",
+			"item": [
+				{
+					"name": "https://braykion.herokuapp.com/api/gestures",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/gestures/id/123456123466",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "UPDATE"
+					},
+					"response": []
+				},
+				{
+					"name": "https://braykion.herokuapp.com/api/gestures",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/gestures",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"label\":\"“Soap and Water\",\n\t\"description\":\"A traditional hand-washing techniques that involves a sink, soap, water and specific gestures\"\n}"
+						},
+						"description": "CREATE"
+					},
+					"response": []
+				},
+				{
+					"name": "https://braykion.herokuapp.com/api/gestures/id/:id",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/gestures",
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": "DELETE"
+					},
+					"response": []
+				},
+				{
+					"name": "https://braykion.herokuapp.com/api/gestures",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/gestures",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": "GET ONE"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Locations",
+			"description": "The locations collection",
+			"item": [
+				{
+					"name": "https://braykion.herokuapp.com/api/locations",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/locations",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": "GET ONE"
+					},
+					"response": []
+				},
+				{
+					"name": "https://braykion.herokuapp.com/api/locations",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/locations/id/123456123466",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "UPDATE"
+					},
+					"response": []
+				},
+				{
+					"name": "https://braykion.herokuapp.com/api/locations",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/locations",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "CREATE"
+					},
+					"response": []
+				},
+				{
+					"name": "https://braykion.herokuapp.com/api/locations/id/:id",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/locations/id/5894f7433166d7ba02060fb9",
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": "DELETE"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Persons",
+			"description": "The person collection",
+			"item": [
+				{
+					"name": "https://braykion.herokuapp.com/api/person",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/person",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": "GET ONE"
+					},
+					"response": []
+				},
+				{
+					"name": "https://braykion.herokuapp.com/api/person",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/person/id/123456123466",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "UPDATE"
+					},
+					"response": []
+				},
+				{
+					"name": "https://braykion.herokuapp.com/api/person",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/person",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "CREATE"
+					},
+					"response": []
+				},
+				{
+					"name": "https://braykion.herokuapp.com/api/person/id/:id",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/person/id/5894f7433166d7ba02060fb9",
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": "DELETE"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Routes",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "Users",
+			"description": "The users collection",
+			"item": [
+				{
+					"name": "https://braykion.herokuapp.com/api/users",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/users",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": "GET ONE"
+					},
+					"response": []
+				},
+				{
+					"name": "https://braykion.herokuapp.com/api/users",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/users/id/123456123466",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "UPDATE"
+					},
+					"response": []
+				},
+				{
+					"name": "https://braykion.herokuapp.com/api/users",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/users",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"customer_id\":\"58c194594b6db81100f90385\",\n\t\"primary_location_id\":\"58c198ed4b6db81100f90387\",\n\t\"person_id\":\"58c1983d4b6db81100f90386\"\n}"
+						},
+						"description": "CREATE"
+					},
+					"response": []
+				},
+				{
+					"name": "https://braykion.herokuapp.com/api/users/id/:id",
+					"request": {
+						"url": "https://braykion.herokuapp.com/api/users/id/5894f84f3166d7ba02060fba",
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"description": "DELETE"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

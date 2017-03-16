@@ -7,6 +7,7 @@ System.config({
         '@angular': 'node_modules/@angular',
         'rxjs'    : 'node_modules/rxjs',
         'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
+        'underscore': 'npm:underscore/underscore.js'
     },
     paths: {
         'node_modules/@angular/*': 'node_modules/@angular/*/bundles'

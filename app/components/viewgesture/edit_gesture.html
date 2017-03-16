@@ -1,7 +1,23 @@
+    <header>
+          <div class="container">
+          <div class="col-sm-4">
+                  <div class="header_logo">
+                      <a [routerLink]="['/home']"class="closebtn"><img src="../app/components/images/logo-wh.png" alt=""></a>
 
-<ul>               
-<li *ngFor="let post of posts.gestures"> 
-        <!--<a  [routerLink]="['/update', post._id]">{{post.label}}</a>-->
-        <a  [routerLink]="['/update',post._id]">{{post._id}}</a>
-</li>
-<ul>  
+                  </div>
+              </div>
+          <div class="col-sm-4"><h2>Gesture</h2></div>
+          <div class="col-sm-4">
+              <span class="radius_l">Route A</span>
+              <span class="radius_r">Route B</span>
+          </div>
+          </div>
+      </header>
+
+        <ul>               
+                <li *ngFor="let post of posts.gestures"> 
+                        <a  [routerLink]="['/update',post._id]">{{post._id}}</a>
+                </li>
+        <ul> 
+
+

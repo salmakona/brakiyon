@@ -1,7 +1,6 @@
 import { Injectable,NgModule }    from '@angular/core';
 import {Http, Response, Headers, RequestOptions}from '@angular/http';
 import 'rxjs/add/operator/toPromise';
-import { Hero } from './hero';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
@@ -15,14 +14,11 @@ export class EditGestureService {
     constructor (private http: Http) {}
     private headers = new Headers({'Content-Type': 'application/json'});
     
-        getData():Observable<any[]> {
+    getData():Observable<any[]> {
             return this.http.get('https://braykion.herokuapp.com/api/gestures')
                 .map(this.extractData)
                     .catch(this.handleError);
-      }
-    
-
- 
+    }
         private getUrl ='https://braykion.herokuapp.com/api/gestures/id';
         getdatabyId(id: any): Observable<any> {
             console.log("Hello"+ id);
