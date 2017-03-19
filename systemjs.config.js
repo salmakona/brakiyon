@@ -6,6 +6,7 @@ System.config({
     map: {
         '@angular': 'node_modules/@angular',
         'rxjs'    : 'node_modules/rxjs',
+        'ng2-pagination' : 'node_modules/ng2-pagination/dist',
         'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
         'underscore': 'npm:underscore/underscore.js'
     },
@@ -18,6 +19,7 @@ System.config({
     packages: {
         'app'                              : {main: 'main', defaultExtension: 'ts'},
         'rxjs'                             : {main: 'Rx'},
+        'ng2-pagination'                    :{main: 'ng2-pagination'},
         '@angular/core'                    : {main: 'core.umd.min.js'},
         '@angular/common'                  : {main: 'common.umd.min.js'},
         '@angular/compiler'                : {main: 'compiler.umd.min.js'},

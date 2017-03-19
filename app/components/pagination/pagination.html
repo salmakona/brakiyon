@@ -5,9 +5,9 @@
             <h1>Angular 2 - Pagination </h1>
 
             <!-- items being paged -->
-            <div *ngFor="let item of pagedItems">{{item.name}}</div>
+            <div *ngFor="let item of pagedItems">{{item.label}}</div>
 
-            <!-- pager -->
+            <!-- pager-->
             <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
                 <li [ngClass]="{disabled:pager.currentPage === 1}">
                     <a (click)="setPage(1)">First</a>
@@ -26,6 +26,6 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> 
     <hr />
 </div>

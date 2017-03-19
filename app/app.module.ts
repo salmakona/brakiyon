@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import{routing} from './app.routes';
+import {Ng2PaginationModule} from 'ng2-pagination';
 import { HttpModule, JsonpModule } from '@angular/http';
 import{platformBrowser} from '@angular/platform-browser';
 import{HomeComponent} from './components/home/home';
@@ -28,9 +29,11 @@ import{EditGestureComponent} from './components/viewgesture/edit_gesture';
 import{UpdateGestureComponent} from'./components/viewgesture/update';
 import{PaginationComponent} from './components/pagination/pagination';
 import{GesturePaginationComponent} from './components/pagination/gs';
+import{OneComponent} from './components/pagination/one';
+import{twoappcomponent} from './components/pagination/two';
 
 @NgModule({
-    imports: [ BrowserModule, routing, ReactiveFormsModule,HttpModule,JsonpModule],
+    imports: [ BrowserModule, routing, ReactiveFormsModule,HttpModule,JsonpModule,Ng2PaginationModule],
 
     declarations: [AppComponent,HomeComponent,GestureComponent,
                     ViewGestureComponent,FootNoteComponent,AddCustomerComponent,
@@ -38,7 +41,7 @@ import{GesturePaginationComponent} from './components/pagination/gs';
                     AddDeviceComponent,EditDeviceComponent,PlayGroundComponent,
                      ReportsComponent,ViewUserComponent,AddUserComponent,EditUserComponent,
                      TestGestureComponent,EditGestureComponent,UpdateGestureComponent,
-                     PaginationComponent,GesturePaginationComponent
+                     PaginationComponent,GesturePaginationComponent,OneComponent,twoappcomponent
                 ],
 
     providers:[{provide: LocationStrategy, useClass: HashLocationStrategy}],

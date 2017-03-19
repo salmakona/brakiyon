@@ -16,13 +16,15 @@
 </header>
 
         <ul>               
-        <li *ngFor="let post of data.gestures"> 
+        <!--<li *ngFor="let post of data.gestures"> -->
+            <li *ngFor="let post of data.gestures">
                 <!--<a  [routerLink]="['/update', post._id]">{{post.label}}</a>-->
             {{post.label}}
         </li>
         <ul>  
+        
             <!-- pager -->
-          <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+         <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
                 <li [ngClass]="{disabled:pager.currentPage === 1}">
                     <a (click)="setPage(1)">First</a>
                 </li>
@@ -39,4 +41,7 @@
                     <a (click)="setPage(pager.totalPages)">Last</a>
                 </li>
             </ul>
+            
+
+
 

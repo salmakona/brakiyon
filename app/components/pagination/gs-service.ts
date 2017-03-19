@@ -30,10 +30,15 @@ export class GesturePaginationService {
                 return Observable.throw(errMsg);
     }
 
+    
+    
+    print(){
+            console.log("Hello");
+        }
+
 
 
     //pagination code
-
         getPager(totalItems: number, currentPage: number = 1, pageSize: number = 10) {
         // calculate total pages
         let totalPages = Math.ceil(totalItems / pageSize);
