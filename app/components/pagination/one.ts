@@ -46,7 +46,7 @@ constructor (private http: Http) {}
 
     getPage(page: number) {
 
-       this.http.get('http://localhost:8080/app/components/pagination/dummy-data.json')
+       this.http.get('app/components/pagination/dummy-data.json')
         //this.http.get('https://braykion.herokuapp.com/api/gestures/')
         .do((res: any) => {
                 this.total = res.json().total;
