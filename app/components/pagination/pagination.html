@@ -1,37 +1,39 @@
-<div>
- <div>
-    <div class="container">
-        <div class="text-center">
-            <h1>Gesture Pagination </h1>
-              <ul>
-                        <li *ngFor="let post of posts.gestures">  
-                            <h4> {{post.label}}</h4>
+               <div class="body_content_view">
+                	<div class="body_content_view_header">
+                    	<div class="col-xs-4">
+                            <h2>Gestures</h2>
+                        </div>
+                    </div>
+                	<div class="body_content_view_content">
+                    	<div class="body_content_view_content_top">
+                        	<div class="col-xs-4"><h3>ITEMS Information</h3></div>
+                        	<div class="col-xs-8">
+                            	<span>
+                                    
+                                	<div id="current_page">{{current_page}}</div>
+                                    <p  (click)="next()" alt="" id="next_page">next</p>
+                                    <p (click)="previous()" alt="" id="previous_page"> privious</p>
+                                </span>
+                            	<span id="total_items_text"></span>
+                            </div>
+                        </div>
+                        <div class="body_content_view_content_table">
+                            <table id="itemsTable" class="table table-bordered table-hover" width="647">
+                            <!-- GET /api/items/ -->
+                                <thead>
+                                    <tr>
+                                        <th> Label</th>
+                                        <th>Description</th>
 
-                        </li>
-                    </ul>
+                                    </tr>
+                                    <tr *ngFor="let post of xx">
+                                            <td>{{post.label}}</td>
+                                             <td>{{post.description}}</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
 
-            <!-- items being paged -->
-            <!--<div *ngFor="let item of pagedItems">{{item.label}}</div>-->
-
-            <!-- pager-->
-            <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
-                <li [ngClass]="{disabled:pager.currentPage === 1}">
-                    <a (click)="setPage(1)">First</a>
-                </li>
-                <li [ngClass]="{disabled:pager.currentPage === 1}">
-                    <a (click)="setPage(pager.currentPage - 1)">Previous</a>
-                </li>
-                <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
-                    <a (click)="setPage(page)">{{page}}</a>
-                </li>
-                <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-                    <a (click)="setPage(pager.currentPage + 1)">Next</a>
-                </li>
-                <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
-                    <a (click)="setPage(pager.totalPages)">Last</a>
-                </li>
-            </ul>
-        </div>
-    </div> 
-    <hr />
-</div>

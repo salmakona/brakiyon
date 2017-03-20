@@ -40,11 +40,11 @@ export class OneComponent {
      totalItems:number;
 constructor (private http: Http) {}
 
-    ngOnInit() {
+   /* ngOnInit() {
         this.getPage(1);
     }
 
-    getPage(page: number) {
+   getPage(page: number) {
 
        this.http.get('app/components/pagination/dummy-data.json')
         //this.http.get('https://braykion.herokuapp.com/api/gestures/')
@@ -55,7 +55,6 @@ constructor (private http: Http) {}
             .map((response: Response) => response.json())
             .subscribe(data => this.data = data
         );
-
         this.asyncMeals = serverCall(this.data, page)
             .do(res => {
                 this.total = res.total;
@@ -65,6 +64,7 @@ constructor (private http: Http) {}
     }
 }
 
+*/
 /**
  * Simulate an async HTTP call with a delayed observable.
  */
