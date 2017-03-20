@@ -30,7 +30,8 @@
     "systemjs": "0.19.37",
     "ws": "^1.1.1",
     "zone": "^0.3.4",
-    "zone.js": "^0.7.2"
+    "zone.js": "^0.7.2",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "@types/es6-shim": "0.0.30",

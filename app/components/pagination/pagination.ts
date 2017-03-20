@@ -3,7 +3,7 @@ import { Http, Headers, RequestOptions, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { PagerService } from './pagination_service';
-//import  'underscore';
+//import * as _ from 'underscore';
 @Component({
     selector: 'pagination',
     templateUrl: 'app/components/pagination/pagination.html',
@@ -21,21 +21,24 @@ export class PaginationComponent implements OnInit {
 
     // paged items
     pagedItems: any[];
+    private posts:any[] = [];
 
     ngOnInit() {
-        // get dummy data
-        this.http.get('http://localhost:8080/app/components/pagination/dummy-data.json')
-       // this.http.get('https://braykion.herokuapp.com/api/gestures/')
-            .map((response: Response) => response.json())
-            .subscribe(data => {
+     this.get().subscribe(data => {
                 // set items to json response
-                this.allItems = data;
-
+                this.posts = data;
                 // initialize to page 1
-                this.setPage(1);
-            });
+                 this.setPage(1);
+        }); 
     }
 
+    get():Observable<any[]>{
+        // get dummy data
+        //return this.http.get('./dummy-data.json')
+        return this.http.get('https://braykion.herokuapp.com/api/gestures/')
+            .map((response: Response) => response.json())
+            
+    }
 
             setPage(page: number) {
                 if (page < 1 || page > this.pager.totalPages) {
@@ -43,10 +46,10 @@ export class PaginationComponent implements OnInit {
                 }
 
         // get pager object from service
-        this.pager = this.pagerService.getPager(this.allItems.length, page);
+         this.pager = this.pagerService.getPager(this.posts.length, page);
 
         // get current page of items
-        this.pagedItems = this.allItems.slice(this.pager.startIndex, this.pager.endIndex + 1);
+        //this.pagedItems = this.posts.slice(this.pager.startIndex, this.pager.endIndex + 1);
 
     }
 }
