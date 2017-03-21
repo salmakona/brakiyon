@@ -926,6 +926,9 @@ box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
 .view_gasture_main_main ul li{
 	list-style: none;
 }
+.body_content_view_content_table .gestureTable{
+	width: 100%;
+}
 		
 		
 		

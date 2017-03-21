@@ -1,39 +1,83 @@
-               <div class="body_content_view">
-                	<div class="body_content_view_header">
-                    	<div class="col-xs-4">
-                            <h2>Gestures</h2>
-                        </div>
-                    </div>
-                	<div class="body_content_view_content">
-                    	<div class="body_content_view_content_top">
-                        	<div class="col-xs-4"><h3>ITEMS Information</h3></div>
-                        	<div class="col-xs-8">
-                            	<span>
-                                    
-                                	<div id="current_page">{{current_page}}</div>
-                                    <p  (click)="next()" alt="" id="next_page">next</p>
-                                    <p (click)="previous()" alt="" id="previous_page"> privious</p>
-                                </span>
-                            	<span id="total_items_text"></span>
-                            </div>
-                        </div>
-                        <div class="body_content_view_content_table">
-                            <table id="itemsTable" class="table table-bordered table-hover" width="647">
-                            <!-- GET /api/items/ -->
-                                <thead>
-                                    <tr>
-                                        <th> Label</th>
-                                        <th>Description</th>
+<header>
+    <div class="container">
+      <div class="col-sm-4">
+              <div class="header_logo">
+                  <a [routerLink]="['/home']"class="closebtn"><img src="../app/components/images/logo-wh.png" alt=""></a>
 
-                                    </tr>
-                                    <tr *ngFor="let post of xx">
-                                            <td>{{post.label}}</td>
-                                             <td>{{post.description}}</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+              </div>
+        </div>
+      <div class="col-sm-4"><h2>Gesture</h2></div>
+          <div class="col-sm-4">
+              <span class="radius_l">Route A</span>
+              <span class="radius_r">Route B</span>
+          </div>
+      </div>
+</header>
+<div class="view_gasture_body_container">
+          <div class="container">
+              <span>View Gesture List</span>     
+          </div>
+</div>
+<div class="body_content_view">
+	<div class="body_content_view_header">
+    </div>
+      <div class="view_gasture_main_header">
+          <div class="container">
+              <div class="col-sm-6"> 
+                  <div class="level">
+                      <h2>Level</h2>
+                  </div>
+              </div>
+              <div class="col-sm-6"> 
+                  <div class="level">
+                      <h2>Description</h2>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+
+<div class="view_gasture_main"> 
+    <div class="container">
+         <div class="view_gasture_main_main">
+            <div class="body_content_view_content_table">
+                    <table class="gestureTable">
+                    <!-- GET /api/items/ -->
+                            <tr *ngFor="let post of xx">
+                                <div class="col-sm-6"> 
+                                    <td><h4>{{post.label}}</h4></td>
+                                </div>
+                                <div class="col-sm-6"> 
+                                    <td><h4>{{post.description}}</h4></td>
+                                </div>
+                            </tr>
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+</div>
+
+<!--<div class="col-xs-4"><h3>ITEMS Information</h3></div>
+        	<div class="col-xs-8">
+            	<span>
+                	<div id="current_page">{{current_page}}</div>
+                    <p  (click)="next()" alt="" id="next_page">next</p>
+                    <p (click)="previous()" alt="" id="previous_page"> privious</p>
+                </span>
+            	<span id="total_items_text"></span>
+            </div>
+        </div>
+-->
+<div class="view_gasture_main_page_innation">
+            
+        <div class="container">
+            <span class="next_gasture" (click)="next()" alt="" id="next_page"></span>
+            <span class="total_gasture" id="total_items_text"></span>
+            <span class="current_gasture" id="current_page">{{current_page}}</span>
+            <span class="prev_gasture" (click)="previous()" alt="" id="previous_page"></span>
+        </div>
+        
+
+</div>
 
