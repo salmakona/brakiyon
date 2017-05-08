@@ -15,8 +15,8 @@ import { Router, ActivatedRoute } from '@angular/router';
    
 })
 @Injectable()
-export class TestGestureComponent{ 
-
+export class TestGestureComponent{
+    
         gestureformModel: FormGroup;
         dd:string;
         dy:string;  
@@ -37,39 +37,31 @@ export class TestGestureComponent{
 
                     if(this.submitted = true){
 
-                        console.log("submitted from");
-                        console.log("Form Button Clicked"); 
-                        var x = formValue.label;
-                        var y = formValue.description;
-                        this.dd = x;
-                        this.dy = y;
-                             var url = "https://braykion.herokuapp.com/api/gestures";
-                                var data = {
-                                    "label":x,
-                                    "description":y
-                                }
-                                console.log("Onclick");
-                                let headers = new Headers({ 'Content-Type': 'application/json',"Access-Control-Allow-Origin":"*" });
-                                let options = new RequestOptions({ headers: headers });
-                                let body =JSON.stringify(data);
-                                return this.http.post(url,JSON.stringify(data), options).map((res: Response) => res.json())
-                                        .subscribe(data => {alert('ok');
-                                            }, error => {console.log(error.json());
-                                });
-
-                             
-                        
+                            console.log("submitted from");
+                            console.log("Form Button Clicked"); 
+                            var x = formValue.label;
+                            var y = formValue.description;
+                            this.dd = x;
+                            this.dy = y;
+                            var url = "https://braykion.herokuapp.com/api/gestures";
+                            var data = {
+                                "label":x,
+                                "description":y
+                            }
+                            console.log("Onclick");
+                            let headers = new Headers({ 'Content-Type': 'application/json',"Access-Control-Allow-Origin":"*" });
+                            let options = new RequestOptions({ headers: headers });
+                            let body =JSON.stringify(data);
+                            return this.http.post(url,JSON.stringify(data), options).map((res: Response) => res.json())
+                                    .subscribe(data => {alert('ok');
+                                        }, error => {console.log(error.json());
+                            });
 
                     }else{
                         console.log("Not submitted from");
                     }
-            
-        
      }
-
-   
-
-                
+         
 }
 
 

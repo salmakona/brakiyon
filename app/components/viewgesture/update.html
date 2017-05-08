@@ -1,26 +1,47 @@
-    <header>
-          <div class="container">
-          <div class="col-sm-4">
-                  <div class="header_logo">
-                      <a [routerLink]="['/home']"class="closebtn"><img src="../app/components/images/logo-wh.png" alt=""></a>
-
-                  </div>
-              </div>
-          <div class="col-sm-4"><h2>Gesture</h2></div>
-          <div class="col-sm-4">
-              <span class="radius_l">Route A</span>
-              <span class="radius_r">Route B</span>
-          </div>
-          </div>
-      </header>
-     <div class="view_gasture_main"> 
-         <div class="container">
-            <div class="view_gasture_main_main">
-                    <div *ngIf="posts">
-                        <h2>{{posts.label}}</h2>
-                        <button>Back</button>
-                        <button>Save</button>
-                        </div>
+ <header>
+    <div class="container">
+        <div class="col-sm-4">
+            <div class="header_logo">
+                <a [routerLink]="['/home']" class="closebtn"><img src="../app/components/images/logo-wh.png" alt=""></a>
             </div>
-         </div>
-    </div> 
+        </div>
+        <div class="col-sm-4"><h2>Gesture</h2></div>
+        <div class="col-sm-4">
+            <span class="radius_l">Route A</span>
+            <span class="radius_r">Route B</span>
+        </div>
+    </div>
+</header>
+<div class="view_gasture_body_container">
+    <div class="container">
+    <span>Update  Gesture By Id </span>
+</div>
+</div>
+
+<div class="view_gasture_main">
+    <div class="view_gasture_main_main">
+            <form #f="ngForm" (ngSubmit)="update(f.value)">
+                <table>
+                    <tr *ngIf="posts">
+                        <tr>
+                        <tr>
+                            <td>
+                                <textarea [(ngModel)]="posts.label"   name="label"></textarea>
+                            </td>
+
+                        </tr> 
+                        <tr>
+                            <td>
+                                <textarea [(ngModel)]="posts.description"   name="description"></textarea>
+                            </td>
+                        </tr>
+                        <tr> 
+                        <td>
+                            <button type="submit" class="Submit">Update</button> 
+                        </td>
+                    </tr> 
+                </table>
+            </form>
+            <button><a [routerLink]="['/edit_gesture']">Go Back</a></button>
+    </div>
+</div>

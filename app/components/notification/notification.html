@@ -1,0 +1,81 @@
+<header>
+    <div class="container">
+        <div class="col-sm-4">
+            <div class="header_logo">
+                <h2>Notification</h2>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="notification_body">
+     <div class="notification_body_contant">
+        <div>
+            <h1>
+               <a [routerLink]="['/notification']" (click)="getproximityHandWash($event)"> 
+                    <p>Patient Proximity - No Handwash Detected </p> 
+                </a>
+            </h1>
+            
+        </div>
+        <div> 
+            <h1>
+                <a [routerLink]="['/notification']" (click)="getproximityHandWashDatadectect($event)">
+                   <p> Patient Proximity - Handwash Detected </p>
+                </a>
+            </h1>
+        </div>
+        <div>
+            <h1>
+                <a [routerLink]="['/notification']" (click)="gethandwashdataSoapandWater($event)">
+                    <p>
+                        Handwash - With Soap and Water
+                    </p>
+                </a>
+            </h1>
+        </div>
+        <div>
+           <a [routerLink]="['/notification']" (click)="gethandwashAlcohol($event)">
+               <p>
+                    Handwash - With Alcohol Based Sanitizer
+               </p>
+            </a>
+        </div>
+
+     </div>
+    <!--
+        <div class="notification_body_contant">
+            <h1>My Name Is Al IOmran</h1>
+            <div><p>This is link</p></div>
+            <div><p>This is link</p></div>
+            <div><p>This is link</p></div>
+        </div>
+           
+        <div class="notification_body_contant">
+            <h1>My Name Is Al IOmran</h1>
+            <div><p>This is link</p></div>
+            <div><p>This is link</p></div>
+            <div><p>This is link</p></div>
+        </div>
+        <div class="notification_body_contant">
+            <h1>My Name Is Al IOmran</h1>
+            <div><p>This is link</p></div>
+            <div><p>This is link</p></div>
+            <div><p>This is link</p></div>
+        </div>
+        <div class="notification_body_contant">
+            <h1>My Name Is Al IOmran</h1>
+            <div><p>This is link</p></div>
+            <div><p>This is link</p></div>
+            <div><p>This is link</p></div>
+        </div>
+        <div class="notification_body_contant">
+            <h1>My Name Is Al IOmran</h1>
+            <div><p>This is link</p></div>
+            <div><p>This is link</p></div>
+            <div><p>This is link</p></div>
+        </div>
+        -->
+</div>
+
+

@@ -1,4 +1,24 @@
+
+<div id="mobileNav" class="overlay">
+      <div class="tab_logo">
+            <a href="#"><img src="../app/components/images/logo-color.png" alt=""></a>
+      </div>
+
+      <div class="overlay-content">
+
+            <a [routerLink]="['/gesture']"class="closebtn" ><span class="icon_1"></span>Add Gesture</a>
+            <a [routerLink]="['/viewgesture']" class="closebtn" ><span class="icon_2"></span>View Gesture</a>
+            <a [routerLink]="['/view_customer']" class="closebtn" ><span class="icon_3"></span>Customers</a>
+            <a [routerLink]="['/view_device']" class="closebtn" ><span class="icon_4"></span>Devices</a>
+            <a [routerLink]="['/play_ground']" class="closebtn" ><span class="icon_5"></span>Playground</a>
+            <a [routerLink]="['/reports']" class="closebtn" ><span class="icon_5"></span>Reports</a>
+            <a [routerLink]="['/view_user']" class="closebtn" ><span class="icon_5"></span>User</a>
+            <a [routerLink]="['/notification']" class="closebtn" ><span class="glyphicon glyphicon-bell"></span>Notifications 
+            <span class="notifi">10</span></a>
+            
+      </div>
+</div>
 <div class="wrapper">
     
-          <router-outlet></router-outlet>
+         <router-outlet></router-outlet>
 </div>

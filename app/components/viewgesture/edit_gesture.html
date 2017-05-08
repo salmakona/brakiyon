@@ -16,7 +16,8 @@
 
         <ul>               
                 <li *ngFor="let post of posts.gestures"> 
-                        <a  [routerLink]="['/update',post._id]">{{post._id}}</a>
+                    <a  [routerLink]="['/update',post._id]">{{post._id}}</a> |
+                    <a  [routerLink]="['/delete',post._id]">Delete</a>
                 </li>
         <ul> 
 

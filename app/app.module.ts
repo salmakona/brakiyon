@@ -1,5 +1,6 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { NgModule,OnInit}      from '@angular/core';
+import { NgModule,OnInit,Input}      from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
@@ -28,12 +29,10 @@ import{TestGestureComponent} from'./components/gesture/testgesture';
 import{EditGestureComponent} from './components/viewgesture/edit_gesture';
 import{UpdateGestureComponent} from'./components/viewgesture/update';
 import{PaginationComponent} from './components/pagination/pagination';
-import{GesturePaginationComponent} from './components/pagination/gs';
-import{OneComponent} from './components/pagination/one';
-import{twoappcomponent} from './components/pagination/two';
-
+import{DeleteGestureComponent} from './components/viewgesture/delete';
+import{NotificationComponent}  from './components/notification/notification';
 @NgModule({
-    imports: [ BrowserModule, routing, ReactiveFormsModule,HttpModule,JsonpModule,Ng2PaginationModule],
+    imports: [ BrowserModule, routing, ReactiveFormsModule,HttpModule,JsonpModule,Ng2PaginationModule, FormsModule],
 
     declarations: [AppComponent,HomeComponent,GestureComponent,
                     ViewGestureComponent,FootNoteComponent,AddCustomerComponent,
@@ -41,7 +40,7 @@ import{twoappcomponent} from './components/pagination/two';
                     AddDeviceComponent,EditDeviceComponent,PlayGroundComponent,
                      ReportsComponent,ViewUserComponent,AddUserComponent,EditUserComponent,
                      TestGestureComponent,EditGestureComponent,UpdateGestureComponent,
-                     PaginationComponent,GesturePaginationComponent,OneComponent,twoappcomponent
+                     PaginationComponent,DeleteGestureComponent,NotificationComponent
                 ],
 
     providers:[{provide: LocationStrategy, useClass: HashLocationStrategy}],

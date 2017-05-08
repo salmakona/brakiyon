@@ -19,13 +19,10 @@ import{TestGestureComponent} from'./components/gesture/testgesture';
 import{EditGestureComponent} from './components/viewgesture/edit_gesture';
 import{UpdateGestureComponent} from'./components/viewgesture/update';
 import{PaginationComponent} from './components/pagination/pagination';
-import{GesturePaginationComponent} from './components/pagination/gs';
-import{OneComponent} from './components/pagination/one';
-import{twoappcomponent} from './components/pagination/two';
-
+import{DeleteGestureComponent} from './components/viewgesture/delete';
+import{NotificationComponent}  from './components/notification/notification';
 
 const routes: Routes = [
-    
     {path: '', component: AppComponent},
     {path: 'home', component: HomeComponent},
     {path: 'gesture', component: GestureComponent},
@@ -46,11 +43,8 @@ const routes: Routes = [
     {path:'edit_gesture',component: EditGestureComponent},
     { path: 'update/:id', component: UpdateGestureComponent },
     { path: 'pagination', component: PaginationComponent },
-    { path: 'gesturepagination', component: GesturePaginationComponent },
-    { path: 'one', component: OneComponent },
-     { path: 'twoapp', component: twoappcomponent }
-
-
+    { path: 'delete/:id', component: DeleteGestureComponent },
+     { path: 'notification', component: NotificationComponent }
 ];
 
 export const routing = RouterModule.forRoot(routes);

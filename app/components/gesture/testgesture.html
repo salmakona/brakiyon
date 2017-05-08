@@ -17,7 +17,6 @@
               <span>TEST ADD Gesture</span>
           </div>
       </div>
-        
         <section class="form_area fadeInDown" [hidden]="submitted">
            <form #f="ngForm" [formGroup]="gestureformModel" (ngSubmit)="onSubmit(f.value, f.valid)" novalidate>
                 <div class="container">
@@ -33,7 +32,7 @@
                             <div class="col-sm-12">
                                     <label>Description:</label>
                                         <div class="form-group" [class.has-error]="gestureformModel.hasError('validator', 'description')">
-                            <textarea class="text" placeholder="Input your description" formControlName="description"></textarea>
+    <textarea class="text" placeholder="Input your description" formControlName="description"></textarea>
                                             <span [hidden]="!gestureformModel.hasError('required', 'description')">description is required</span>
                                         </div>
                             </div>
@@ -57,7 +56,7 @@
                         <div class="col-sm-12">
                         <p>Are you sure you want to add this gasuture</p>
                         <p>Label:  {{dd}}</p>
-                           <p>Description: {{dy}}</p>
+                        <p>Description: {{dy}}</p>
                         </div>
                         <div class="col-sm-6">
                            <!--<button type="submit" class="Submit">ADD</button>-->

@@ -5,7 +5,7 @@ import {Http, Response, Headers, RequestOptions}from '@angular/http';
 import { FormsModule} from '@angular/forms';
 import 'rxjs/add/operator/map';
 import {Observable} from 'rxjs/Rx';
-import 'rxjs/add/operator/map';
+
 
 @Component({
     selector: 'gesture',
