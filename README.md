@@ -1,2 +1,3 @@
-Angular2 project
+Angular2
+
 typescript, angular2
